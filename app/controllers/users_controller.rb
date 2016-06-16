@@ -30,9 +30,9 @@ class UsersController < ApplicationController
 	   if @user.save
 	     flash[:success] = "こうしんされました"
 	   redirect_to @user
-	 else
+	   else
 	   render 'edit'
-	 end
+	   end
   end
   
   def check_current_user
