@@ -16,6 +16,12 @@
 
       <%= f.label :user_profile %>
       <%= f.text_field :user_profile %>
+      
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
 
       <%= f.submit "ぷろふぃーるをこうしんする", class: "btn btn-large btn-primary" %>
     <% end %>
