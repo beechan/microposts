@@ -6,18 +6,12 @@ Rails.application.routes.draw do
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
-<<<<<<< HEAD
-  
-  resources :users
-  resources :sesssions, only: [:new, :create, :destroy]
-  resources :microposts
-  resources :relationships, only: [:create, :destroy]
-=======
   get  'settings', to: 'settings#edit'
   
   resources :users
   resources :sesssions, only: [:new, :create, :destroy]
   resources :settings,  only: [:edit, :update]
   resources :microposts
->>>>>>> user-profile
+  resources :sesssions, only: [:new, :create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 end
