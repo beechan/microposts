@@ -3,6 +3,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.order(created_at: :desc)
+    
+    if logged_in?
+      @microposts = current_user.feed_items.includes(:user).order(created_at: :desc).page(params[:page]).per(3)
+    end
+    
   end
   
   def new
