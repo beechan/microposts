@@ -43,9 +43,9 @@ class UsersController < ApplicationController
 	   @user.update_attributes(user_params)
 	   if @user.save
 	     flash[:success] = "こうしんされました"
-	   redirect_to @user
+	     redirect_to @user
 	   else
-	   render 'edit'
+	     render 'edit'
 	   end
   end
   

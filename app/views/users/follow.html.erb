@@ -1,6 +1,6 @@
 <div class="col-md-8">
       <h3><%= @title %>(<%= @follow.count %>)</h3>
-      <div class="followers">
+      <div class="follow">
         <% @follow.each do |user| %>
             <%= render partial: 'follow_info', locals: { user: user } %>
         <% end %>
